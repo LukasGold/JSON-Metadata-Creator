@@ -1,0 +1,90 @@
+{
+  "title": "EIS data",
+  "type": "object",
+  "required": [
+    "file_type",
+    "file_format"
+  ],
+  "properties": {
+    "file_type": {
+      "type": "string",
+      "enum": ["EIS data"]
+    },
+    "file_format": {
+      "type": "string",
+      "enum": [
+        ".txt",
+        ".dat",
+        ".z (ZView)",
+        ".mpt (ZView & EC-Lab)",
+        ".mpr (EC-Lab)",
+        ".zdat (ZView)",
+        ".mdat (ZView)"
+      ]
+    },
+    "num_header_lines": {
+      "type": "integer",
+      "description": "Number of header lines. Last line is supposed to contain column names. If the file contains no header line choose 0"
+    },
+    "columns": {
+      "type": "array",
+      "format": "table",
+      "title": "Columns",
+      "uniqueItems": false,
+      "items": {
+         "title": "Column",
+         "type": "object",
+         "required": [
+            "header",
+            "name",
+            "description"
+         ],
+         "properties": {
+                "header": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+          }
+      }
+    },
+    "procedure_details": {
+      "type": "object",
+      "properties": {
+        "eis_type": {
+          "type": "string",
+          "enum": [
+            "PEIS",
+            "GEIS",
+            "ORP-EIS",
+            "NFRA"
+          ]
+        },
+        "amplitude": {
+          "type": "float",
+          "description": "Amplitude of excitation in mV or mA, depending on eis_type."
+        }
+      }
+    },
+    "setup_details": {
+      "type": "object",
+      "properties": {
+        "control": {
+          "type": "string",
+          "enum": [
+            "WE vs. CE",
+            "WE vs. RE",
+            "CE vs. RE"
+          ]
+        }
+      }
+    }
+  }
+}
