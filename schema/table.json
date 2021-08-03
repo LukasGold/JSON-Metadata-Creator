@@ -18,6 +18,9 @@
         "Origin"
       ]
     },
+    "num_header_lines": {
+      "type": "integer"
+    },
     "columns": {
       "type": "array",
       "format": "table",
