@@ -19,7 +19,8 @@
       ]
     },
     "num_header_lines": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Number of header lines. Last line is supposed to contain column names. If the file contains no header line choose 0"
     },
     "columns": {
       "type": "array",
