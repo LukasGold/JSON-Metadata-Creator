@@ -68,7 +68,7 @@
           ]
         },
         "amplitude": {
-          "type": "float",
+          "type": "number",
           "description": "Amplitude of excitation in mV or mA, depending on eis_type."
         }
       }
