@@ -8,7 +8,9 @@
   "properties": {
     "file_type": {
       "type": "string",
-      "enum": ["EIS data"]
+      "enum": [
+        "EIS data"
+      ]
     },
     "file_format": {
       "type": "string",
@@ -32,27 +34,27 @@
       "title": "Columns",
       "uniqueItems": false,
       "items": {
-         "title": "Column",
-         "type": "object",
-         "required": [
-            "header",
-            "name",
-            "description"
-         ],
-         "properties": {
-                "header": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "unit": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
+        "title": "Column",
+        "type": "object",
+        "required": [
+          "header",
+          "name",
+          "description"
+        ],
+        "properties": {
+          "header": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
           }
+        }
       }
     },
     "procedure_details": {
@@ -68,7 +70,7 @@
           ]
         },
         "mode": {
-          "type" : "string",
+          "type": "string",
           "enum": [
             "Single sine",
             "Multi sine",
@@ -137,6 +139,47 @@
             "WE vs. RE",
             "CE vs. RE"
           ]
+        }
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "properties": {
+        "ambient_temperature": {
+          "type": "number",
+          "description": "in degree Celsius"
+        },
+        "sample_state": {
+          "type": "array",
+          "format": "table",
+          "title": "Sample state",
+          "uniqueItems": true,
+          "items": {
+            "title": "State",
+            "type": "object",
+            "required": [
+              "variable",
+              "value"
+            ],
+            "properties": {
+              "variable": {
+                "type": "string",
+                "enum": [
+                  "Time at rest / s",
+                  "Soc / %",
+                  "Cell voltage / V",
+                  "Constant dc voltage / V",
+                  "Constant dc current / mA"
+                ]
+              },
+              "value": {
+                "type": "number"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     }
