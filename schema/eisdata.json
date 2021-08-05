@@ -67,9 +67,63 @@
             "NFRA"
           ]
         },
+        "mode": {
+          "type" : "string",
+          "enum": [
+            "Single sine",
+            "Multi sine",
+            "ORP-EIS"
+          ]
+        },
         "amplitude": {
           "type": "number",
           "description": "Amplitude of excitation in mV or mA, depending on eis_type."
+        },
+        "frequency_range": {
+          "type": "object",
+          "properties": {
+            "initial_frequency": {
+              "type": "number",
+              "description": "Starting frequency in Hz"
+            },
+            "final_frequency": {
+              "type": "number",
+              "description": "End frequency in Hz"
+            },
+            "step_size": {
+              "type": "object",
+              "properties": {
+                "num_points": {
+                  "type": "integer",
+                  "description": "number of points"
+                },
+                "boundary_option": {
+                  "type": "string",
+                  "enum": [
+                    "per decade",
+                    "from fi to ff"
+                  ],
+                  "description": "with"
+                },
+                "spacing_option": {
+                  "type": "string",
+                  "enum": [
+                    "logarithmic",
+                    "linear"
+                  ],
+                  "description": "spacing"
+                }
+              }
+            }
+          }
+        },
+        "averaging": {
+          "type": "number",
+          "description": "Number of repetitions averaged for a single data point in the file."
+        },
+        "drift_correction": {
+          "type": "boolean",
+          "description": "If drift correction is enabled, frequency will be swept downwards and upwards."
         }
       }
     },
