@@ -34,6 +34,7 @@
       "format": "table",
       "title": "Columns",
       "uniqueItems": false,
+      "description": "header: the name of the column as specified in the header\nname: the name of the column to be used after import",
       "items": {
         "title": "Column",
         "type": "object",
