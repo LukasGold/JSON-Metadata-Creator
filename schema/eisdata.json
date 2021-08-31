@@ -21,7 +21,8 @@
         ".mpt (ZView & EC-Lab)",
         ".mpr (EC-Lab)",
         ".zdat (ZView)",
-        ".mdat (ZView)"
+        ".mdat (ZView)",
+        ".dta (Gamry)"
       ]
     },
     "num_header_lines": {
@@ -43,10 +44,16 @@
         ],
         "properties": {
           "header": {
-            "type": "string"
+            "type": "string",
+            "options": {
+              "infoText": "The name of the column as specified in the header"
+            }
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "options": {
+              "infoText": "The name of the column to be used after import"
+            }
           },
           "unit": {
             "type": "string"
@@ -74,7 +81,7 @@
           "enum": [
             "Single sine",
             "Multi sine",
-            "ORP-EIS"
+            "ORP-EIS (all frequencies at once)"
           ]
         },
         "amplitude": {
@@ -84,13 +91,13 @@
         "frequency_range": {
           "type": "object",
           "properties": {
-            "initial_frequency": {
+            "lowest_frequency": {
               "type": "number",
-              "description": "Starting frequency in Hz"
+              "description": "Lowest frequency in Hz"
             },
-            "final_frequency": {
+            "highest_frequency": {
               "type": "number",
-              "description": "End frequency in Hz"
+              "description": "Highest frequency in Hz"
             },
             "step_size": {
               "type": "object",
@@ -103,7 +110,7 @@
                   "type": "string",
                   "enum": [
                     "per decade",
-                    "from fi to ff"
+                    "across all frequencies"
                   ],
                   "description": "with"
                 },
@@ -111,7 +118,8 @@
                   "type": "string",
                   "enum": [
                     "logarithmic",
-                    "linear"
+                    "linear",
+                    "semi-logarithmic"
                   ],
                   "description": "spacing"
                 }
