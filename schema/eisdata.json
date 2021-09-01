@@ -34,6 +34,10 @@
       "format": "table",
       "title": "Columns",
       "uniqueItems": false,
+      "options": {
+        "infoText": "'header': column label in the file, 'name': preferred label for import, 'unit': physical unit, 'description': comment / free text"
+      },
+      "description": "header: the name of the column as specified in the header\nname: the name of the column to be used after import",
       "items": {
         "title": "Column",
         "type": "object",
@@ -62,8 +66,7 @@
             "type": "string"
           }
         }
-      },
-      "description": "header: the name of the column as specified in the header\nname: the name of the column to be used after import"
+      }
     },
     "procedure_details": {
       "type": "object",
