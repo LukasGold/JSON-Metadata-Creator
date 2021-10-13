@@ -15,7 +15,8 @@
       "enum": [
         "CSV",
         "Excel",
-        "Origin"
+        "Origin",
+        "Database table"
       ]
     },
     "num_header_lines": {
@@ -27,6 +28,9 @@
       "format": "table",
       "title": "Columns",
       "uniqueItems": false,
+      "options": {
+        "infoText": "'header': column label in the file, 'name': preferred label for import, 'unit': physical unit, 'description': comment / free text"
+      },
       "items": {
          "title": "Column",
          "type": "object",
