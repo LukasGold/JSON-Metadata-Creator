@@ -8,7 +8,7 @@
       "options": {
             "keep_oneof_values": false
       },
-        "oneOf": [
+      "oneOf": [
           {
             "$ref": "none.json",
             "title": "None"
