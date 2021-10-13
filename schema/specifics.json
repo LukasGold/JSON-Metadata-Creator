@@ -5,6 +5,9 @@
       "items": {
       "title": "Specific",
       "headerTemplate": "{{i}} - {{self.file_type}}",
+      "options": {
+            "keep_oneof_values": false
+      },
         "oneOf": [
           {
             "$ref": "none.json",
@@ -41,6 +44,10 @@
           {
             "$ref": "eisdata.json",
             "title": "EIS data"
+          },
+          {
+            "$ref": "database.json",
+            "title": "Database"
           }
         ]
      }  
