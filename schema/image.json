@@ -29,9 +29,9 @@
       "title": "Resolution",
       "type": "string",
       "enum": [
-        "high", 
-        "medium", 
-        "low"
+        "High",
+        "Medium",
+        "Low"
       ]
     },
     "caption": {
