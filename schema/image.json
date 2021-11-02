@@ -12,6 +12,7 @@
       "enum": ["Image"]
     },
     "file_format": {
+      "title": "File format",
       "type": "string",
       "enum": [
         "jpg", 
@@ -25,6 +26,7 @@
       ]
     },
     "resolution": {
+      "title": "Resolution",
       "type": "string",
       "enum": [
         "high", 
@@ -33,14 +35,17 @@
       ]
     },
     "caption": {
+      "title": "Caption",
       "type": "string"
     },
     "copy_right": {
+      "title": "Copy right",
       "type": "string"
     },
     "purpose": {
+      "title": "Purpose",
       "type": "string",
-      "description": "e. g. research, documentation, web media, print media, social media, press release"
+      "description": "E. g. research, documentation, web media, print media, social media, press release"
     }
   }
 }

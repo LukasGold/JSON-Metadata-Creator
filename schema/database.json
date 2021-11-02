@@ -12,6 +12,7 @@
       "enum": ["Database"]
     },
     "file_format": {
+      "title": "File format",
       "type": "string",
       "enum": [
         ".accdb (Microsoft Access)",

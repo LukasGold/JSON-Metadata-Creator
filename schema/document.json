@@ -12,6 +12,7 @@
       "enum": ["Document"]
     },
     "file_format": {
+      "title": "File format",
       "type": "string",
       "enum": [
         "PDF",

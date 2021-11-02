@@ -1,5 +1,5 @@
 {
-  "title": "Sample Reference",
+  "title": "Sample reference",
   "type": "object",
   "required": [
     "file_type",
@@ -12,9 +12,11 @@
       "enum": ["Sample"]
     },
     "sample_id": {
+      "title": "Sample ID",
       "type": "string"
     },
     "sample_description": {
+      "title": "Sample description",
       "type": "string",
       "description": "Description of the sample"
     }

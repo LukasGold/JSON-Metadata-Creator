@@ -78,7 +78,7 @@
       "type": "string",
       "enum": [
         "Internal",
-        "Selected Externals",
+        "Selected externals",
         "Public"
       ],
       "description": "Access restrictions of the file",

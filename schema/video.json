@@ -12,6 +12,7 @@
       "enum": ["Video"]
     },
     "file_format": {
+      "title": "File format",
       "type": "string",
       "enum": [
         "mp4", 
@@ -22,6 +23,7 @@
       ]
     },
     "resolution": {
+      "title": "Resolution",
       "type": "string",
       "enum": [
         "4K", 
@@ -31,14 +33,17 @@
       ]
     },
     "caption": {
+      "title": "Caption",
       "type": "string"
     },
     "copy_right": {
+      "title": "Copy right",
       "type": "string"
     },
     "purpose": {
+      "title": "Purpose",
       "type": "string",
-      "description": "e. g. research, documentation, web media, print media, social media, press release"
+      "description": "E. g. research, documentation, web media, print media, social media, press release"
     }
   }
 }

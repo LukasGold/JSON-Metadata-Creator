@@ -12,6 +12,7 @@
       "enum": ["CAD"]
     },
     "file_format": {
+      "title": "File format",
       "type": "string",
       "enum": [
         "Inventor",
