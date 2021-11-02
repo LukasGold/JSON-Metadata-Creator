@@ -15,18 +15,19 @@
       "title": "File format",
       "type": "string",
       "enum": [
-        "mp4", 
-        "mpg", 
-        "avi", 
-        "wmv", 
-        "mov"
+        ".mp4",
+        ".mpg",
+        ".avi",
+        ".wmv",
+        ".mov"
       ]
     },
     "resolution": {
       "title": "Resolution",
       "type": "string",
       "enum": [
-        "4K", 
+        "4K",
+        "2K",
         "FHD", 
         "HD",
         "SD"
