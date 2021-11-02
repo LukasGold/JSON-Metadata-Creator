@@ -8,6 +8,7 @@
   ],
   "properties": {
      "file_type": {
+      "title": "File type",
       "type": "string",
       "enum": ["Source Code"]
     },
