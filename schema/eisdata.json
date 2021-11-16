@@ -104,7 +104,8 @@
           "type": "number",
           "options": {
             "infoText": "The amplitude of the excitation in mV or mA, depending on EIS type"
-          },
+          }
+        },
         "amplitude_unit": {
           "title": "Unit",
           "type": "string",
@@ -113,7 +114,6 @@
             "mA"
           ],
           "default": "mV"
-        }
         },
         "frequency_range": {
           "title": "Frequency range",
@@ -167,7 +167,6 @@
         "drift_correction": {
           "title": "Drift correction",
           "type": "boolean",
-          "description": ".",
           "default": false,
           "options": {
             "infoText": "If the drift correction is enabled, the frequency will be swept downwards and upwards"
