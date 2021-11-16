@@ -107,13 +107,16 @@
           }
         },
         "amplitude_unit": {
-          "title": "Unit",
+          "title": "Unit of the amplitude",
           "type": "string",
           "enum": [
             "mV",
             "mA"
           ],
-          "default": "mV"
+          "default": "mV",
+          "options": {
+            "infoText": "The unit of the amplitude of the excitation"
+          }
         },
         "frequency_range": {
           "title": "Frequency range",
