@@ -1,5 +1,5 @@
 {
-  "title": "Electrochemical impedance spectroscopy data",
+  "title": "Electrochemical cycling data",
   "type": "object",
   "required": [
     "file_type",
@@ -10,7 +10,27 @@
       "title": "File type",
       "type": "string",
       "enum": [
-        "Electrochemical impedance spectroscopy data"
+        "Electrochemical cycling data"
+      ]
+    },
+    "device_manufacturer": {
+      "title": "Device manufacturer",
+      "type": "string",
+      "enum": [
+        "Agilent",
+        "Arbin",
+        "BaSyTec",
+        "BioLogic",
+        "Digatron",
+        "EA Elektro-Automatik",
+        "FuelCon (Horiba)",
+        "Gamry",
+        "Hioki",
+        "Rigol",
+        "Scienlab (Keysight)",
+        "Maccor",
+        "Metrohm",
+        "Solartron Analytical (AMETEK)"
       ]
     },
     "file_format": {
@@ -19,12 +39,8 @@
       "enum": [
         ".txt",
         ".dat",
-        ".z (ZView)",
-        ".mpt (ZView & EC-Lab)",
-        ".mpr (EC-Lab)",
-        ".zdat (ZView)",
-        ".mdat (ZView)",
-        ".dta (Gamry)"
+        ".csv",
+        "other (vendor specific)"
       ]
     },
     "num_header_lines": {
