@@ -1,0 +1,46 @@
+{
+  "title": "Container",
+  "type": "object",
+  "required": [
+    "file_type",
+    "file_format"
+  ],
+  "properties": {
+    "file_type": {
+      "title": "File type",
+      "type": "string",
+      "enum": ["Container"]
+    },
+    "file_format": {
+      "title": "File format",
+      "type": "string",
+      "enum": [
+        ".zip",
+        ".rar",
+        ".7z",
+        ".gz",
+        ".gzip",
+        ".tar.gz",
+        ".iso",
+        "other"
+      ]
+    },
+    "file_format_version": {
+      "type": "string",
+      "title": "File format version"
+    },
+    "content": {
+      "title": "Content",
+      "type": "array",
+      "format": "tabs",
+      "items": {
+      "title": "Item",
+      "headerTemplate": "{{i}} - {{self.file_type}}",
+      "options": {
+            "keep_oneof_values": false
+      },
+      "$ref": "specificsOneOf.json"
+     }
+    }
+  }
+}
