@@ -32,6 +32,7 @@
         ".gzip",
         ".tar.gz",
         ".iso",
+        "folder",
         "other"
       ]
     },
